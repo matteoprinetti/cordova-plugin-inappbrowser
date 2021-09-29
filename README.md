@@ -20,7 +20,7 @@ description: Open an in-app browser window.
 #         specific language governing permissions and limitations
 #         under the License.
 -->
-# Enable hiding of soft navigation bar (bottom) for devices that have no physical buttons 
+# This fork enables hiding of soft navigation bar (bottom) for devices that have no physical buttons (on Android)
 
 Use: `cordova.InAppBrowser.open('http:\\www.my.site', '_self', 'location=no,hidesoft=yes');`
 

@@ -20,7 +20,11 @@ description: Open an in-app browser window.
 #         specific language governing permissions and limitations
 #         under the License.
 -->
+# Enable hiding of soft navigation bar (bottom) for devices that have no physical buttons 
 
+Use: `cordova.InAppBrowser.open('http:\\www.my.site', '_self', 'location=no,hidesoft=yes');`
+
+Flag hidesoft will cause the soft keys on the bottom to disappear and reapper when sliding from outside the viewport.
 
 # cordova-plugin-inappbrowser
 

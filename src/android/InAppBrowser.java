@@ -935,10 +935,16 @@ public class InAppBrowser extends CordovaPlugin {
                 // WebView
                 inAppWebView = new WebView(cordova.getActivity());
                 
-                // top set hard to 48
+                // set 48 pixel fix to top
                 if (hidesoft) {
-                    inAppWebView.setY(48);
+                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+                    layoutParams.setMargins(0, 48, 0, 0);
+                    inAppWebView.setLayoutParams(layoutParams);
                 }
+                else {
+                    inAppWebView.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+                }
+                   
                 inAppWebView.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
                 inAppWebView.setId(Integer.valueOf(6));
                 // File Chooser Implemented ChromeClient
